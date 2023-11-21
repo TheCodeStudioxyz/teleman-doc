@@ -127,7 +127,7 @@
                     <section class="docs-section" id="item-1-2">
                         <h2 class="section-heading">Server Requirements</h2>
                         <p>
-                            PHP Verion: 8.0+
+                            PHP Verion: 8.1+
                             <br>
                             MySQL Version: 5.2+
                             <br>
@@ -221,14 +221,27 @@
                         <h2 class="section-heading">Cronjob</h2>
                         <p>
                             You should setup the four following Cronjob:<br>
-                            1. For calculate the balance deductoin, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan calculate:deduction<br>
-                            2. For call duration, Every 1 second:<br>
-                            usr/local/bin/php /home6/username/public_html/artisan call:duration<br>
-                            3. For campaign call, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan start:calling<br>
-                            3. For Expiry subscription alert, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan send:expiry-alert-mail<br>
+                            1. For calculate the balance deduction:<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan calculate:deduction</strong>
+                            <br>
+                            2. For call duration:<br>
+                            <strong>usr/local/bin/php /home6/username/public_html/artisan call:duration</strong>
+                            <br>
+                            3. For campaign call:<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan start:calling</strong>
+                            <br>
+                            3. For Expiry subscription alert:<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan send:expiry-alert-mail</strong>
+                            <br>
+                            4. For revoke number:<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan number:revoke</strong>
+                            <br>
+                            5. For CSV import:<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan import:csv</strong>
+                            <br>
+                            5. For Bulk SMS (If you have the Bulk SMS addon):<br>
+                            <strong>/usr/local/bin/php /home6/username/public_html/artisan start:sms</strong>
+                            <br>
                         </p>
                         <br>
                         <b>Note:: You can set your own desired schedule as long as you want.</b><br><br>
@@ -302,8 +315,10 @@
                             3. <b>Verified caller ID::</b> Now we need to create a verified caller ID if you are using a
                             trial account.
                             <br>
-                            4. <b>Capability Token::</b> Go to voice Twiml App. Create a new app. You will see the voice
-                            configuration request URL. input this https:://domain.com/vc/cid{yourphonenumber}.php
+                            4. <b>TwilML::</b> Go to voice Twiml App. Create a new app. You will see the voice
+                            configuration request URL. input this https:://domain.com/handle_call
+                            <br>
+                            For incoming message configuration request URL: https:://domain.com/handle_message
                             <br>
                             5. <b>Geo Permission::</b> You have to confirm the Geo permission for which country you want
                             to call without this permission you will face geo permission air so please fix your confirm
