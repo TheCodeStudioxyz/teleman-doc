@@ -90,6 +90,11 @@
                                 class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Support</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Overview</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Contact us</a></li>
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+                                class="theme-icon-holder mr-2"><i class="fas fa-sheet-plastic"></i></span>Google Sheets Auto-Dialer Campaign</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Setup</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Usage Notes</a></li>
                 </ul>
 
             </nav>
@@ -356,6 +361,44 @@
                         </p>
                     </section>
 
+                </article>
+
+                <article class="docs-article" id="section-4">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Google Sheets Auto-Dialer Campaign</h1>
+                    </header>
+                    <section class="docs-section" id="item-4-1">
+                        <h2 class="section-heading">Overview</h2>
+                        <p>
+                            The Google Sheets Auto-Dialer Campaign feature allows you to seamlessly integrate your Google Sheets data with Teleman for automated dialing campaigns. This powerful tool enables you to manage your contact lists in Google Sheets and have Teleman automatically dial them according to your campaign settings.
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-4-2">
+                        <h2 class="section-heading">Setup</h2>
+                        <p>
+                            To set up a Google Sheets Auto-Dialer Campaign, follow these steps:
+                            <ol>
+                                <li><b>Enable Google Sheets API:</b> Ensure that the Google Sheets API is enabled in your Google Cloud Platform project. You may need to create a project if you don't have one already.</li>
+                                <li><b>Create Service Account:</b> Create a service account in the Google Cloud Platform Console. Download the JSON key file for this service account.</li>
+                                <li><b>Share Google Sheet:</b> Share your Google Sheet with the email address of the service account you created. Grant at least "Viewer" access.</li>
+                                <li><b>Configure Teleman:</b> In Teleman, navigate to the campaign settings and choose "Google Sheets Auto-Dialer." Upload the JSON key file and provide the Google Sheet ID or URL.</li>
+                                <li><b>Map Columns:</b> Map the columns in your Google Sheet (e.g., phone number, name) to the corresponding fields in Teleman.</li>
+                                <li><b>Set Campaign Parameters:</b> Define other campaign parameters such as calling hours, retry attempts, and caller ID.</li>
+                                <li><b>Start Campaign:</b> Once configured, you can start the campaign, and Teleman will begin dialing the numbers from your Google Sheet.</li>
+                            </ol>
+                        </p>
+                    </section>
+                    <section class="docs-section" id="item-4-3">
+                        <h2 class="section-heading">Usage Notes</h2>
+                        <p>
+                            <ul>
+                                <li>Ensure your Google Sheet is formatted correctly with one contact per row.</li>
+                                <li>The system will automatically skip rows with missing or invalid phone numbers.</li>
+                                <li>You can monitor the campaign progress in real-time from the Teleman dashboard.</li>
+                                <li>Updates made to the Google Sheet (e.g., adding new contacts, removing contacts) will be reflected in the campaign, usually within a few minutes, depending on your sync settings.</li>
+                            </ul>
+                        </p>
+                    </section>
                 </article>
 
                 <footer class="footer">
